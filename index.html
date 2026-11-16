@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Health Dashboard (9 - 15 พ.ย.)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Prompt', sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+    }
+  </style>
+</head>
+<body class="p-4 md:p-8">
+
+  <div class="max-w-5xl mx-auto space-y-6">
+    
+    <!-- Header -->
+    <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">สรุปสุขภาพ 7 วันย้อนหลัง</span>
+        <h1 class="text-2xl md:text-3xl font-bold text-slate-800 mt-2">Personal Health Dashboard</h1>
+        <p class="text-slate-500 text-sm mt-1">ช่วงวันที่ 9 พ.ย. – 15 พ.ย. • น้ำหนักตัวปัจจุบัน <strong class="text-slate-700">43 กก.</strong></p>
+      </div>
+      <div class="flex flex-wrap gap-3 text-sm">
+        <div class="bg-indigo-50 text-indigo-700 px-4 py-2.5 rounded-xl">
+          <div class="text-xs text-indigo-500">เป้าหมายการนอน</div>
+          <div class="font-semibold">7.0 – 8.0 ชม./คืน</div>
+        </div>
+        <div class="bg-sky-50 text-sky-700 px-4 py-2.5 rounded-xl">
+          <div class="text-xs text-sky-500">เกณฑ์น้ำดื่ม (43 กก.)</div>
+          <div class="font-semibold">1.5 – 1.8 ลิตร/วัน</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 KPI Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <!-- KPI 1 -->
+      <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
+        <div class="flex items-center justify-between">
+          <span class="text-sm font-medium text-slate-500">วันออกกำลังกาย</span>
+          <span class="p-2 bg-emerald-50 text-emerald-600 rounded-lg text-lg">🔥</span>
+        </div>
+        <div class="mt-3 flex items-baseline gap-2">
+          <span class="text-3xl font-bold text-slate-800">7</span>
+          <span class="text-sm text-slate-500">/ 7 วัน (100%)</span>
+        </div>
+        <p class="text-xs text-emerald-600 mt-2 font-medium">✓ สม่ำเสมอดีเยี่ยมทุกวัน</p>
+      </div>
+
+      <!-- KPI 2 -->
+      <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
+        <div class="flex items-center justify-between">
+          <span class="text-sm font-medium text-slate-500">เวลาออกกำลังกายรวม</span>
+          <span class="p-2 bg-amber-50 text-amber-600 rounded-lg text-lg">⏱️</span>
+        </div>
+        <div class="mt-3 flex items-baseline gap-2">
+          <span class="text-3xl font-bold text-slate-800">275</span>
+          <span class="text-sm text-slate-500">นาที</span>
+        </div>
+        <p class="text-xs text-slate-500 mt-2">เฉลี่ยวันละ ~39 นาที (4 ชม. 35 นาที)</p>
+      </div>
+
+      <!-- KPI 3 -->
+      <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
+        <div class="flex items-center justify-between">
+          <span class="text-sm font-medium text-slate-500">ชั่วโมงนอนเฉลี่ย</span>
+          <span class="p-2 bg-indigo-50 text-indigo-600 rounded-lg text-lg">😴</span>
+        </div>
+        <div class="mt-3 flex items-baseline gap-2">
+          <span class="text-3xl font-bold text-slate-800">6.6</span>
+          <span class="text-sm text-slate-500">ชม./คืน</span>
+        </div>
+        <p class="text-xs text-amber-600 mt-2 font-medium">! ต่ำกว่าเป้าหมาย 7 ชม. เล็กน้อย</p>
+      </div>
+
+      <!-- KPI 4 -->
+      <div class="bg-white p-5 rounded-2xl shadow
